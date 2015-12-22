@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:weightSum="1"
+    >
+
+    <ImageView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoimage"
+        android:src="@drawable/logo"
+
+        />
+
+
+    <Button
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:text="Log in"
+    android:textSize="30dp"
+    android:layout_gravity="center"
+    android:background="@drawable/red_button"
+    android:layout_weight="0.12"
+    android:id="@+id/Loginfirst"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/red_button"
+        android:layout_weight="0.12"
+        android:id="@+id/signupfirst"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="About iRecall"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/red_button"
+        android:layout_weight="0.12"
+        android:id="@+id/more"/>
+
+
+
+</LinearLayout>

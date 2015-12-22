@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+    android:layout_column="@android:integer/status_bar_notification_info_maxnum"
+
+android:layout_margin="10dp"
+android:layout_marginLeft="5dp"
+android:layout_marginTop="20dp"
+
+android:padding="1px"
+android:textColor="#fff"
+    >
+
+
+<ImageView
+    android:id="@+id/backimage"
+    android:layout_width="150dp"
+    android:layout_height="120dp"
+    android:src="@drawable/brain"
+    android:onClick="onClick"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="50dp"/>
+
+<ImageView
+    android:id="@+id/backimage2"
+    android:layout_width="150dp"
+    android:layout_height="120dp"
+    android:src="@drawable/brain"
+    android:onClick="onClick"
+
+    android:layout_alignTop="@+id/backimage"
+    android:layout_toEndOf="@+id/backimage" />
+    <ImageView
+        android:id="@+id/backimage3"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:src="@drawable/brain"
+        android:onClick="onClick"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/backimage"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/backimage4"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:src="@drawable/brain"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/backimage3"
+        android:layout_toEndOf="@+id/backimage" />
+
+    <ImageView
+        android:id="@+id/backimage5"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:src="@drawable/brain"
+        android:onClick="onClick"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/backimage3"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/backimage6"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:src="@drawable/brain"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/backimage5"
+        android:layout_toEndOf="@+id/backimage" />
+
+
+
+
+</RelativeLayout>
+
+
+
