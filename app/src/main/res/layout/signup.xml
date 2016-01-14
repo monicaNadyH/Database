@@ -7,118 +7,67 @@
 
 
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name:"
-        android:textSize="20dp"
-        android:id="@+id/firstname"
-        android:layout_alignParentTop="true"
-        android:textColor="#010101"
-        android:layout_above="@drawable/logotwo"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email Address"
-        android:id="@+id/email"
-        android:textSize="20dp"
-        android:textColor="#010101"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/TFname" />
+        android:src="@drawable/s"
+        android:id="@+id/imageView3" />
 
     <EditText
-        android:layout_width="fill_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:id="@+id/TFname"
-        android:layout_below="@+id/firstname"
-        android:layout_alignParentEnd="true"
-
-        />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFemail"
-        android:layout_below="@+id/email"
-        android:layout_alignParentStart="true"
-
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        android:id="@+id/usernamee"
-        android:textSize="20dp"
-        android:textColor="#010101"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/TFemail" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFusername"
-        android:layout_below="@+id/usernamee"
-        android:layout_alignParentStart="true"
-
-        />
-
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Password:"
-    android:id="@+id/pass"
-    android:textSize="20dp"
-    android:textColor="#010101"
-    android:layout_alignParentStart="true"
-    android:layout_below="@+id/TFusername" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm Password:"
-        android:id="@+id/confpass"
-        android:textSize="20dp"
-        android:textColor="#010101"
-        android:layout_below="@+id/TFpassword"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFpassword"
-        android:layout_below="@+id/pass"
-        android:layout_alignParentStart="true"
-        android:password="true"
-        />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFconfirmpassword"
-        android:layout_below="@+id/confpass"
-        android:layout_alignParentStart="true"
-        android:password="true"
-        />
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:id="@+id/logotwo"
-        android:src="@drawable/logotwo"
-        android:alpha=".30"
-        android:layout_below="@+id/TFname"
+        android:hint="Name "
+        android:layout_marginTop="135dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFemail"
+        android:hint="Email "
+        android:layout_below="@+id/TFname"
+        android:layout_alignStart="@+id/TFname"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFusername"
+        android:hint="Username "
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/TFemail"
+        android:layout_alignStart="@+id/TFemail" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFpassword"
+        android:hint="Password "
+        android:layout_marginTop="15dp"
+        android:password="true"
+        android:layout_below="@+id/TFusername"
+        android:layout_alignStart="@+id/TFusername" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFconfirmpassword"
+        android:password="true"
+        android:hint="Confirm password "
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/TFpassword"
+        android:layout_alignStart="@+id/TFpassword" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/TFconfirmpassword"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/TFconfirmpassword"
+        android:layout_marginLeft="20dp">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -129,13 +78,13 @@
             android:onClick="selectUser"
             />
         <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guardian"
-        android:text="Guardian"
-        android:textSize="20dp"
-        android:onClick="selectUser"
-        />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guardian"
+            android:text="Guardian"
+            android:textSize="20dp"
+            android:onClick="selectUser"
+            />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -156,15 +105,18 @@
     </RadioGroup>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Sign up"
-        android:textColor="#b03060"
-        android:textSize="50dp"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
         android:id="@+id/signupbtn"
         android:onClick="onButtonClick"
+        android:background="#ff7363"
         android:gravity="center"
         android:layout_marginLeft="100dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

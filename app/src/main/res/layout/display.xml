@@ -1,55 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/green">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome, "
-        android:textSize="40dp"/>
+        android:textSize="40dp"
+        android:id="@+id/fonttext"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/emptyString"
-        android:layout_toEndOf="@+id/welcome"
         android:id="@+id/TVusername" />
-    <Button
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/edit"
+        android:id="@+id/editprofile"
+        android:onClick="onButtonClick"
+        android:layout_below="@+id/fonttext"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/fonttext"
+        android:background="#7fe2ffc5"/>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit profile"
         android:textSize="30dp"
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/editprofile"
-        android:onClick="onButtonClick" />
+        android:layout_alignBottom="@+id/editprofile"
+        android:layout_alignEnd="@+id/getcontact"
+        android:textColor="#010101"
+        android:id="@+id/textView4" />
 
-    <Button
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+
+        android:src="@drawable/contact"
+        android:textSize="30dp"
+        android:id="@+id/getcontact"
+        android:layout_alignTop="@+id/remind"
+        android:layout_alignStart="@+id/editprofile"
+        android:background="#7fe2ffc5" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:text="Get contacts"
         android:textSize="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/getcontact"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:textColor="#010101"
+        android:layout_alignBottom="@+id/getcontact"
+        android:layout_alignStart="@+id/getcontact" />
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:text="Images"
+        android:src="@drawable/picone"
         android:textSize="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/getimages"/>
+        android:id="@+id/getimages"
+        android:layout_below="@+id/fonttext"
+        android:layout_alignParentEnd="true"
+        android:background="#7fe2ffc5"/>
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Get Images"
+        android:textSize="30dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#010101"
+        android:layout_above="@+id/remind"
+        android:layout_alignEnd="@+id/getimages"
+        android:id="@+id/textView5" />
+
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:text="Reminders"
+        android:src="@drawable/reminder"
         android:textSize="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/remind"/>
+        android:id="@+id/remind"
+        android:layout_below="@+id/getimages"
+        android:layout_alignStart="@+id/getimages"
+        android:layout_marginTop="105dp"
+        android:background="#7fe2ffc5"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminders"
+        android:textSize="30dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#010101"
+        android:layout_alignBottom="@+id/remind"
+        android:layout_alignStart="@+id/textView5" />
+
+</RelativeLayout>

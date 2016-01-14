@@ -1,25 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@color/maroon">
+<?include
+    layout = "@layout/app_bar"
+></include?>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome patient: "
-        android:textSize="30dp"/>
+        android:text="Welcome "
+        android:textSize="40dp"
+        android:textColor="#ff5a45"
+        android:id="@+id/textone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/emptyString"
-        android:layout_toEndOf="@+id/welcome"
-        android:id="@+id/patientuname" />
-    <Button
+        android:layout_toEndOf="@+id/textone"
+        android:textSize="40dp"
+        android:id="@+id/patientuname"
+        android:textColor="#FF010101"
+        android:layout_alignParentTop="true" />
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="230dp"
+        android:src="@drawable/picone"
+        android:layout_marginRight="25dp"
+        android:id="@+id/aa"
+        android:layout_marginLeft="10dp"
+        android:foregroundGravity="center"
+        android:background="#8ddee9ff"
+        android:layout_below="@+id/textone"
+        android:layout_toStartOf="@+id/patientuname" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flip picture"
+        android:text="Flip game"
         android:textSize="30dp"
-        android:id="@+id/aa"/>
+        android:layout_marginLeft="10dp"
+        android:textColor="#010101"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/aa"
+        android:layout_alignEnd="@+id/aa" />
 
-</LinearLayout>
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="230dp"
+        android:src="@drawable/hangman"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="#8ddee9ff"
+        android:id="@+id/hang"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hangman"
+        android:textSize="30dp"
+        android:textColor="#010101"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/hang"
+        android:layout_alignEnd="@+id/aa" />
+
+    <ImageButton
+    android:layout_width="160dp"
+    android:layout_height="230dp"
+    android:src="@drawable/chart"
+    android:layout_marginRight="25dp"
+
+    android:background="#8ddee9ff"
+    android:id="@+id/report"
+    android:layout_marginLeft="10dp"
+    android:layout_below="@+id/patientuname"
+    android:layout_toEndOf="@+id/hang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View report"
+        android:textSize="30dp"
+        android:textColor="#010101"
+        android:id="@+id/textreprt"
+        android:layout_alignBottom="@+id/report"
+        android:layout_alignEnd="@+id/report" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="230dp"
+        android:src="@drawable/setting"
+        android:layout_marginRight="25dp"
+        android:background="#8ddee9ff"
+        android:id="@+id/setting"
+        android:layout_marginLeft="10dp"
+
+        android:layout_alignTop="@+id/hang"
+        android:layout_alignStart="@+id/report" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        android:textSize="30dp"
+        android:textColor="#010101"
+        android:id="@+id/textsetting"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/setting"
+        android:layout_alignEnd="@+id/setting" />
+
+
+</RelativeLayout>

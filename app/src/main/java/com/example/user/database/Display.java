@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,14 +23,16 @@ public class Display extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display);
-
+        Typeface my_typeface = Typeface.createFromAsset(getAssets(),"textt.ttf");
+        TextView text = (TextView) findViewById(R.id.fonttext);
+        text.setTypeface(my_typeface);
         String username = getIntent().getStringExtra("Username");
         TextView tv = (TextView) findViewById(R.id.TVusername);
         tv.setText(username);
-
-        Button btn = (Button) findViewById(R.id.editprofile);
-        Button btn2 = (Button) findViewById(R.id.getcontact);
-        Button btn3 = (Button) findViewById(R.id.getimages);
+        tv.setTypeface(my_typeface);
+        ImageButton btn = (ImageButton) findViewById(R.id.editprofile);
+        ImageButton btn2 = (ImageButton) findViewById(R.id.getcontact);
+        ImageButton btn3 = (ImageButton) findViewById(R.id.getimages);
         Button btn4 = (Button) findViewById(R.id.remind);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

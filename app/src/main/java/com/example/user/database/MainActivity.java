@@ -42,6 +42,7 @@ DatabaseHelper helper = new DatabaseHelper(this);
               password= helper.searchpass(str);
               username= helper.searchuname(pass);
                 urole = helper.searchrole(str, pass);
+
             System.out.println("this role is: "+ urole);
 
                 System.out.println("again this role is: "+ urole);
